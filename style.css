@@ -1,0 +1,58 @@
+:root {
+  --px-to-rem: /16 * 1rem;
+} 
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(212, 45%, 89%);
+}
+
+.solution {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+  }
+
+  &::before,
+  footer {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+
+.card {
+  text-align: center; 
+  max-width: 18em; 
+  background-color: white; 
+  padding: 16px; 
+  border-radius: 20px
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 10px
+}
+
+.cardDescription {
+  font-size: calc(15 var(--px-to-rem));
+  padding-inline: 16px;
+  margin-block: 24px;
+  color: hsl(220, 15%, 55%);
+}
+
+b {
+  font-size: calc(22 var(--px-to-rem));
+  color: hsl(218, 44%, 22%);
+}
+
+p:has(b) {
+  margin-block: 16px
+}
